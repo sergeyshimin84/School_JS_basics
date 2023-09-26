@@ -39,8 +39,44 @@ let my-num = 1
 let const // зарезервированные слова
 */
 
-const resultElement = document.getElementById('result');
-console.log(resultElement.textContent);
+// const resultElement = document.getElementById('result');
+// console.log(resultElement.textContent);
 
-resultElement.textContent = 22;
+// resultElement.textContent = 22;
+
+const resultElement = document.getElementById('result');
+const input1 = document.getElementById('input1');
+const input2 = document.getElementById('input2');
+const submitBtn = document.getElementById('submit');
+const plusBtn = document.getElementById('plus');
+const minusBtn = document.getElementById('minus');
+let action = '+';
+
+// console.log(input2.value);
+
+// const sum = +input1.value + +input2.value;
+// resultElement.textContent = sum;
+// console.log(typeof sum);
+// submitBtn.onclick = () => {
+//     console.log('Hello click!');
+// }
+plusBtn.onclick = () => {
+    action = '+';
+}
+
+minusBtn.onclick = () => {
+    action = '-';
+}
+
+submitBtn.onclick = () => {
+    if (action == '+') {
+        const sum = +(input1.value) + +(input2.value);
+        resultElement.textContent = sum;
+    } else {
+        const sum = +(input1.value) - +(input2.value);
+        resultElement.textContent = sum;
+    }
+}
+
+
 
