@@ -68,15 +68,27 @@ minusBtn.onclick = () => {
     action = '-';
 }
 
-submitBtn.onclick = () => {
-    if (action == '+') {
-        const sum = +(input1.value) + +(input2.value);
-        resultElement.textContent = sum;
+function printResult(result) {
+    if (result < 0) {
+        resultElement.style.color = 'red';
     } else {
-        const sum = +(input1.value) - +(input2.value);
-        resultElement.textContent = sum;
+        resultElement.style.color = 'green';
     }
+    resultElement.textContent = result;
 }
 
+function computeNumbersWithAction(inp1, inp2, actionSymbol) {
+    const num1 = +(inp1.value);
+    const num2 = +(inp2.value);
+    // if (actionSymbol == '+') {
+    //     return num1 + num2;
+    // } else {
+    //     return num1 - num2;
+    // }
+    return actionSymbol == '+' ? num1 + num2 : num1 - num2;
+}
 
-
+submitBtn.onclick = () => {
+    const result = computeNumbersWithAction(input1, input2, action);
+    printResult(result);
+}
