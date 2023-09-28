@@ -1,8 +1,8 @@
-let num = 22; //number
-let firstName = 'Sergey'; //string
-const isProgrammer = true; //boolean
+// let num = 22; //number
+// let firstName = 'Sergey'; //string
+// const isProgrammer = true; //boolean
 
-firstName = 'Max';
+// firstName = 'Max';
 // isProgrammer = false; //error
 
 // alert(firstName);
