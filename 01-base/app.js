@@ -92,3 +92,4 @@ submitBtn.onclick = () => {
     const result = computeNumbersWithAction(input1, input2, action);
     printResult(result);
 }
+
