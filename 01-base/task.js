@@ -66,3 +66,23 @@
 // let b = 5;
 
 // console.log((a > b) ? true : false);
+
+// 3. Основы JavaScript, ч. 2
+// Задание №1
+// let a = 21;
+// if (a % 2 == 0) {
+//     console.log(`${a} четное`);
+// } else {
+//     console.log(`${a} нечетное`);
+//     console.log(`${++a}`);
+// };
+
+// Задание №2
+// for (let i = 0; i <= 1000; i++) {
+//     if (i % 2 != 0) {
+//         console.log(`${i} нечетное число`);
+//     } else if (i % 12 == 0) {
+//         console.log(`${i} число кратно 12`);
+//     }
+// }
+
