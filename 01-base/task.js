@@ -97,7 +97,7 @@
 // }
 
 // Задание №4
-let userName = 'Sergey';
+// let userName = 'Sergey';
 
 // function sayHello(name) {
 //     if (!name) {
@@ -140,8 +140,8 @@ let userName = 'Sergey';
 // console.log(`${category}, ${age} лет`);
 
 // Задание №7
-let a = 2;
-let b = 5;
-let c = (a >= b) ? a : b;
+// let a = 2;
+// let b = 5;
+// let c = (a >= b) ? a : b;
 
-console.log(c);
+// console.log(c);
