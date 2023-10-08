@@ -86,3 +86,62 @@
 //     }
 // }
 
+//Задание №3 
+// let arr = [1, 10, 15, -100, -23, 19, 15032];
+
+// for(let newArr of arr) {
+//     console.log(newArr + (newArr * 0.25));
+// }
+// for(let i of arr) {
+//     console.log(i);
+// }
+
+// Задание №4
+let userName = 'Sergey';
+
+// function sayHello(name) {
+//     if (!name) {
+//         return console.log(`Hello, someone`);
+//     } else {
+//         return console.log(`Hello, ${name}!`);
+//     }
+// }
+
+// let sayHello = (name) => {
+//     (!name) ? 
+//         console.log(`Hello, someone`) : 
+//         console.log(`Hello, ${name}!`);
+// }
+
+// sayHello(userName);
+
+// Задание №5
+// function calc(a, b, operation) {
+//     if (operation == '+') {
+//         return a + b;   
+//     } else if (operation == '-') {
+//         return a - b;
+//     } else if (operation == '*') {
+//         return a * b;
+//     } else if (operation == '/') {
+//         return a / b;
+//     }
+// }
+
+// console.log(calc(1, 2, '+')); // 3
+// console.log(calc(1, 2, '-')); // -1
+// console.log(calc(2, 2, '*')); // 4
+// console.log(calc(4, 2, '/')); // 2
+
+// Задание №6
+// let age = 39;
+// let category = (age >= 18) ? "Взрослый" : "Детский";
+
+// console.log(`${category}, ${age} лет`);
+
+// Задание №7
+let a = 2;
+let b = 5;
+let c = (a >= b) ? a : b;
+
+console.log(c);
