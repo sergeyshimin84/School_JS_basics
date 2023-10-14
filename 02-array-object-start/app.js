@@ -23,8 +23,13 @@ const listElement = document.getElementById('list');
 const notes = ['записать блок про массивы', 'рассказать теорию объектов'];
 
 function render() {
-    listElement.insertAdjacentHTML('beforeend', getNoteTemplate(notes[0]));
-    listElement.insertAdjacentHTML('beforeend', getNoteTemplate(notes[1]));
+    // for(let i = 0; i < notes.length; i++) {
+    //     listElement.insertAdjacentHTML('beforeend', getNoteTemplate(notes[i]));    
+    // }
+
+    for(let note of notes) {
+        listElement.insertAdjacentHTML('beforeend', getNoteTemplate(note));    
+    }
 }
 
 render();
@@ -54,4 +59,21 @@ function getNoteTemplate (title) {
         </li>
     `
 }
+
+/**
+ * Object Theory
+
+const person = {
+    firstName: 'Sergey',
+    lastName: 'Shimin',
+    age: 39,
+    getFullName: function () {
+        console.log(this.firstName + ' ' + this.lastName) 
+    },
+};
+
+person.getFullName();
+console.log(person['age']);
+// console.log(typeof person); //Object
+*/
 
