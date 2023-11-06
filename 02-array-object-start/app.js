@@ -100,7 +100,7 @@ function render() {
 
     // for(let note of notes) {
     //     listElement.insertAdjacentHTML('beforeend', getNoteTemplate(note));    
-    // }
+    // } // более современный формат записи
 }
 
 render();
