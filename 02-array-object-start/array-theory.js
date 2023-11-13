@@ -60,3 +60,28 @@ const people = [
 //     return p.budget > 5000;
 // });
 // console.log(filtered);
+
+// const finded = people.findIndex(function (person) {
+//     return person.budget === 8600;
+// });
+
+// console.log(people.with(finded, 42));
+
+// let sumBudget = 0;
+// const filtered = people.filter(function(p) {
+//     return p.budget > 8000;
+// });
+// filtered.forEach(function(p) {
+//     sumBudget += p.budget;
+// });
+// console.log(filtered);
+// console.log(people);
+
+// const sumBudget = people
+//     .filter((p) => p.budget > 8000)
+//     .map((p) => p.budget)
+//     .reduce((acc, p) => acc + p, 0);
+
+// console.log(sumBudget);
+
+
