@@ -123,6 +123,9 @@ const obj = {
 	money: 12300
 };
 
+let {age, favColor, height, pet, money} = obj;
+console.log(age, favColor, height, pet, money);
+
 /**
  * Задание #6
 
@@ -154,5 +157,11 @@ const updateObj = {
 	money: 11450
 };
 
-const obj2 = {/* ... */};
+const obj2 = {
+    __proto__: obj,
+};
+obj2.age = updateObj.age;
+obj2.favColor = updateObj.favColor;
+obj2.money = updateObj.money;
+
 console.log(obj2);
