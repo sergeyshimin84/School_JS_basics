@@ -42,6 +42,19 @@ for(let key in john) {
 
 getMessage(ann);
 incrementAge(john);
+// Решение преподавателя:
+/**
+const info = ({name, age, pet}) => console.log(`Меня зовут ${name}, мне ${age}, у меня есть питомец ${pet}`);
+
+const incrementAge = people => people.age++;
+
+const display = people => {
+    for(const [key, value] of Object.entries(people))
+        console.log(`${key}: ${value}`);
+}
+
+display(john);
+*/
 
 /**
 Задание #2
@@ -61,6 +74,20 @@ function sum(array) {
 const arr = [1, 50, 20, 75, 90];
   
 sum(arr); // 236
+// Решение преподавателя:
+/**
+function sum(array) {
+  let a = 0;
+	for(const i of array) {
+		a += i;
+  }
+	return a;
+}
+
+const arr = [1, 50, 20, 75, 90];
+
+sum(arr); // 236
+*/
 
 /**
 Задание #3
@@ -105,6 +132,8 @@ function getNote (note) {
         </ul>
     `
 };
+// Решение преподавателя:
+// const render = arr => `<ul>${arr.map(i => `<li>${i}</li>`).join('')}</ul>`;
 
 /**
 Задание #5
@@ -165,3 +194,5 @@ obj2.favColor = updateObj.favColor;
 obj2.money = updateObj.money;
 
 console.log(obj2);
+// Решение преподавателя:
+// const obj2 = { ...obj, ...updateObj };
