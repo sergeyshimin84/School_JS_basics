@@ -22,24 +22,34 @@
 
 // Приложение
 
-let mode = 'time'
+let mode = 'full';
 const output = document.getElementById('output');
 const fullBtn = document.getElementById('full');
 const dateBtn = document.getElementById('date');
 const timeBtn = document.getElementById('time');
 
-fullBtn.onclick = function() {
-    mode = 'full'
-    update() // вызываем update чтобы избежать задержки при переключении, обновляет output
-};
-dateBtn.onclick = function() {
-    mode = 'date'
-    update()
-};
-timeBtn.onclick = function() {
-    mode = 'time'
-    update()
-};
+function bindMode(name) {
+    return function () {
+        mode = name
+        update()
+    }
+}; // вынесли логику в отдельную функцию
+
+// fullBtn.onclick = function() {
+//     mode = 'full'
+//     update() // вызываем update чтобы избежать задержки при переключении, обновляет output
+// };
+// dateBtn.onclick = function() {
+//     mode = 'date'
+//     update()
+// };
+// timeBtn.onclick = function() {
+//     mode = 'time'
+//     update()
+// };
+fullBtn.onclick = bindMode('full');
+dateBtn.onclick = bindMode('date');
+timeBtn.onclick = bindMode('time');
 
 // setInterval(() => {
 //     update()
