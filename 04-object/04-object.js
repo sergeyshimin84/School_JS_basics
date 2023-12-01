@@ -59,6 +59,38 @@ const person = {
 
 const logger = {
     keys() {
-        console.log('')
-    }
+        console.log('Object keys:', Object.keys(this))
+    },
+
+    keysAndValues() {
+        Object.keys(this).forEach((key) => {
+            console.log('Key:', key)
+            console.log('Value:', this[key])
+        })
+    },
 }
+
+// logger.keys(person);
+// const bound = logger.keys.bind(person);
+// bound();
+// logger.keys.call(person, false);
+// logger.keys.apply(person, [false]);
+
+class Person {
+    constructor(name, age) {
+        this.name = name ?? 'Undefined name' // можно сразу прописать в конструкторе значение по умолчанию (в случае когда аргумент не будет передан)
+        this.age = age ?? 'Undefined age'
+    }
+
+    seyHello() {
+        console.log('Hello from', this.name)
+    }
+} // классы позволяют создавать объекты
+
+const newPerson = new Person('Sergey', 39);
+const person1  = new Person('Sergey', 39);
+const person2 = new Person('Ivan', 29);
+
+console.log(newPerson);
+person1.seyHello();
+person2.seyHello();
