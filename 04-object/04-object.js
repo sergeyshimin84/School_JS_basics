@@ -57,18 +57,18 @@ const person = {
 //     console.log(person[key])
 // }); // keys возвращает массив, проходим по нему с помощью forEach, выводим в консоль
 
-const logger = {
-    keys() {
-        console.log('Object keys:', Object.keys(this))
-    },
+// const logger = {
+//     keys() {
+//         console.log('Object keys:', Object.keys(this))
+//     },
 
-    keysAndValues() {
-        Object.keys(this).forEach((key) => {
-            console.log('Key:', key)
-            console.log('Value:', this[key])
-        })
-    },
-}
+//     keysAndValues() {
+//         Object.keys(this).forEach((key) => {
+//             console.log('Key:', key)
+//             console.log('Value:', this[key])
+//         })
+//     },
+// }
 
 // logger.keys(person);
 // const bound = logger.keys.bind(person);
@@ -76,21 +76,31 @@ const logger = {
 // logger.keys.call(person, false);
 // logger.keys.apply(person, [false]);
 
-class Person {
-    constructor(name, age) {
-        this.name = name ?? 'Undefined name' // можно сразу прописать в конструкторе значение по умолчанию (в случае когда аргумент не будет передан)
-        this.age = age ?? 'Undefined age'
-    }
+// class  Human {
+//     isHuman = true
 
-    seyHello() {
-        console.log('Hello from', this.name)
-    }
-} // классы позволяют создавать объекты
+//     humanGreet() {
+//         return 'greet from human'
+//     }
+// }
 
-const newPerson = new Person('Sergey', 39);
-const person1  = new Person('Sergey', 39);
-const person2 = new Person('Ivan', 29);
+// class Person extends Human {
+//     constructor(name, age) {
+//         super()
+//         this.name = name ?? 'Undefined name' // можно сразу прописать в конструкторе значение по умолчанию (в случае когда аргумент не будет передан)
+//         this.age = age ?? 'Undefined age'
+//     }
 
-console.log(newPerson);
-person1.seyHello();
-person2.seyHello();
+//     seyHello() {
+//         console.log('Hello from', this.name)
+//     }
+// } // классы позволяют создавать объекты
+
+// const newPerson = new Person('Sergey', 39);
+// const person1  = new Person('Sergey', 39);
+// const person2 = new Person('Ivan', 29);
+
+// console.log(newPerson);
+// person1.seyHello();
+// person2.seyHello();
+// console.log(person1.humanGreet());
