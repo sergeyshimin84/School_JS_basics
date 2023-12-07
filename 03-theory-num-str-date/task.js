@@ -16,6 +16,16 @@ function isPrimeNumber(num) {
 
 console.log(isPrimeNumber(7));
 
+// Решение преподавателя
+function isPrime(num) {
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) return false;
+    }
+    return num > 1;
+};
+
+console.log(isPrime(4));
+
 // Задание #2
 // Напишите функцию func(), которая принимает num, min, max:
 // Если число num < min, то функция возвращает min ** 2.
@@ -27,7 +37,7 @@ function func(num, min, max) {
         return min ** 2
     } else if (num > max) {
         return max ** 2
-    } else if (num < (max - (max - min) / 2)) {
+    } else if (num < max - ((max - min) / 2)) {
         return num ** 2
     } else {
         return Math.floor(num)
@@ -63,6 +73,17 @@ console.log(isPerfectNumber(28));  // true
 console.log(isPerfectNumber(12));  // false
 console.log(isPerfectNumber(16));  // false
 
+// Решение преподавателя
+const isPerfectNumber2 = num => {
+    const a = [];
+    for(let i = 1; i < num; i++) {
+        if(num % i === 0) {
+            a.push(i);
+        }
+    }
+    return a.reduce((a, b) => a + b, 0) === num;	
+};
+
 // Задание #4
 // Напишите функцию getNumberDigit(), которая принимает число (number) и индекс цифры в числе (digitPosition). 
 // Возвращает она цифру числа number, находящуюся на позиции digitPosition. 
@@ -79,3 +100,40 @@ getNumberDigit(123, 0) // 1
 getNumberDigit(123, 1) // 2
 getNumberDigit(123, 2) // 3
 getNumberDigit(1, 2) // undefined
+
+// Решение преподавателя
+function countDigits(number) {
+    if (number === 0) {
+      return 1;
+    }
+    
+    let count = 0;
+    let num = Math.abs(number);
+  
+    while (num >= 1) {
+      num = Math.floor(num / 10);
+      count++;
+    }
+  
+    return count;
+  }
+  
+  function getNumberDigit(number, digitPosition) {
+    if (digitPosition < 0) {
+      return undefined;
+    }
+  
+    const count = countDigits(number);
+  
+    if (digitPosition > count) {
+      return undefined;
+    }
+  
+    const invertedIndex = count - 1 - digitPosition;
+    let tempNumber = Math.abs(number);
+  
+    for (let i = 0; i < invertedIndex; i++) {
+      tempNumber = Math.floor(tempNumber / 10);
+    }
+    return tempNumber % 10;
+};
