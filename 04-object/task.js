@@ -40,3 +40,40 @@ function countWords(str) {
 
 console.log(countWords(sentence)); // 4
 
+// Задание #3
+// Необходимо написать функцию getInitials(), 
+// которая принимает полное имя в виде строки (например, “John Doe”) и возвращает инициалы в формате “J. D.”.
+
+const fullName = "John Doe";
+function getInitials(str) { 
+    return str.split(' ').map((n)=>n[0]).join('. ');
+};
+
+const initials = getInitials(fullName);
+
+console.log(initials); // "J. D."
+
+// Задание #4
+// Необходимо написать функцию generateGoogleString(), 
+// которая принимает число и возвращает сроку ”Google” с указанным количеством букв “o”. 
+// При этом минимальное количество букв “о” равно 2.
+
+function generateGoogleString(str) {
+
+}
+
+console.log(generateGoogleString(4));
+// Goooogle
+
+console.log(generateGoogleString(0));
+// Google
+
+console.log(generateGoogleString(-2));
+// Google
+
+// Задание #5
+// Реализуйте функцию countVowels(), 
+// которая подсчитывает количество гласных букв (латинских и кириллических) в переданной строке. 
+
+const str = "Hello, Привет!";
+console.log(countVowels(str)); // 4
