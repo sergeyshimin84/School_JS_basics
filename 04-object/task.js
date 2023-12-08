@@ -58,16 +58,15 @@ console.log(initials); // "J. D."
 // которая принимает число и возвращает сроку ”Google” с указанным количеством букв “o”. 
 // При этом минимальное количество букв “о” равно 2.
 
-function generateGoogleString(str) {
-
+function generateGoogleString(quantity) {
+    const str = 'Google';
+    return (quantity > 0) ? str.split('').fill('o', 3, quantity + 1).join('') : str; // !разобрался не доконца
 }
 
 console.log(generateGoogleString(4));
 // Goooogle
-
 console.log(generateGoogleString(0));
 // Google
-
 console.log(generateGoogleString(-2));
 // Google
 
@@ -76,4 +75,9 @@ console.log(generateGoogleString(-2));
 // которая подсчитывает количество гласных букв (латинских и кириллических) в переданной строке. 
 
 const str = "Hello, Привет!";
+function countVowels(str) {
+    var m = str.match(/[aeiouаоуыэяеёюи]/gi); // ищем с помощью регулярного выражения 
+    // g заставляет его выполнять поиск по всей строке, i делает его нечувствительным к регистру
+    return m === null ? 0 : m.length;
+}
 console.log(countVowels(str)); // 4
