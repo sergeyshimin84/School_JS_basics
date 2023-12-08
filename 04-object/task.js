@@ -76,7 +76,7 @@ console.log(generateGoogleString(-2));
 
 const str = "Hello, Привет!";
 function countVowels(str) {
-    var m = str.match(/[aeiouаоуыэяеёюи]/gi); // ищем с помощью регулярного выражения 
+    let m = str.match(/[aeiouаоуыэяеёюи]/gi); // ищем с помощью регулярного выражения 
     // g заставляет его выполнять поиск по всей строке, i делает его нечувствительным к регистру
     return m === null ? 0 : m.length;
 }
