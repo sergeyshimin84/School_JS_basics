@@ -40,6 +40,11 @@ function countWords(str) {
 
 console.log(countWords(sentence)); // 4
 
+// Решение преподавателя
+const countWords2 = str => str.split(' ').length
+
+console.log(countWords2(sentence)); // 4
+
 // Задание #3
 // Необходимо написать функцию getInitials(), 
 // которая принимает полное имя в виде строки (например, “John Doe”) и возвращает инициалы в формате “J. D.”.
@@ -53,15 +58,27 @@ const initials = getInitials(fullName);
 
 console.log(initials); // "J. D."
 
+// Решение преподавателя
+const getInitials2 = name => name.split(' ')
+    .map((el) => `${el[0].toUpperCase()}. `) // в данном примере начальные буквы и так в верхнем регистре, можно обойтись без toUpperCase()
+    .join('');
+
+const initials2 = getInitials2(fullName);
+
+console.log(initials2); // "J. D."
+
 // Задание #4
 // Необходимо написать функцию generateGoogleString(), 
 // которая принимает число и возвращает сроку ”Google” с указанным количеством букв “o”. 
 // При этом минимальное количество букв “о” равно 2.
 
-function generateGoogleString(quantity) {
-    const str = 'Google';
-    return (quantity > 0) ? str.split('').fill('o', 3, quantity + 1).join('') : str; // !разобрался не доконца
-}
+// function generateGoogleString(quantity) {
+//     const str = 'Google';
+//     return (quantity > 0) ? str.split('').fill('o', 3, quantity + 1).join('') : str; // !разобрался не доконца
+// }
+
+// Решение преподавателя
+const generateGoogleString = (times = 0) => `G${'o'.repeat(Math.max(2, times))}gle`
 
 console.log(generateGoogleString(4));
 // Goooogle
@@ -81,3 +98,17 @@ function countVowels(str) {
     return m === null ? 0 : m.length;
 }
 console.log(countVowels(str)); // 4
+
+// Решение преподавателя
+const countVowels2 = (str) => {
+    const vowels = ['a', 'e', 'i', 'o', 'u', 'а', 'е', 'ё', 'и', 'о', 'у', 'ы', 'э', 'ю', 'я'];
+    let count = 0;
+
+    for (let i = 0; i < str.length; i++) {
+        if (vowels.includes(str[i].toLowerCase())) {
+            count++;
+        }
+    }
+};
+
+console.log(countVowels2(str)); // 4
