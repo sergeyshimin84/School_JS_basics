@@ -23,15 +23,15 @@
 //     console.log('timeout')
 // }, 2000);
 
-const delay = (time = 1000) => {
-    const promise = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([1, 2, 3])
-            reject('Error in delay')
-        }, time)
-    })
-    return promise
-};
+// const delay = (time = 1000) => {
+//     const promise = new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             resolve([1, 2, 3])
+//             reject('Error in delay')
+//         }, time)
+//     })
+//     return promise
+// };
 
 // delay(2000)
 //     .then((data) => {
@@ -46,19 +46,19 @@ const delay = (time = 1000) => {
 //     })
 //     .finally(() => console.log('Finally'))
 
-const getData = () => new Promise((resolve) =>
-resolve([1, 2, 3]));
+// const getData = () => new Promise((resolve) =>
+// resolve([1, 2, 3]));
 
-async function asyncExample() {
-    try {
-        await delay(3000) // ждет 3 с.
-        const data = await getData()
-        console.log(data)
-    } catch (err) {
-        console.log(err)
-    } finally {
-        console.log('Finally')
-    }
-};
+// async function asyncExample() {
+//     try {
+//         await delay(3000) // ждет 3 с.
+//         const data = await getData()
+//         console.log(data)
+//     } catch (err) {
+//         console.log(err)
+//     } finally {
+//         console.log('Finally')
+//     }
+// };
 
-asyncExample();
+// asyncExample();

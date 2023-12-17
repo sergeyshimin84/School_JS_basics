@@ -50,13 +50,13 @@ console.log(countWords2(sentence)); // 4
 // которая принимает полное имя в виде строки (например, “John Doe”) и возвращает инициалы в формате “J. D.”.
 
 const fullName = "John Doe";
-function getInitials(str) { 
-    return str.split(' ').map((n)=>n[0]).join('. ');
-};
+// function getInitials(str) { 
+//     return str.split(' ').map((n)=>n[0]).join('. ');
+// };
 
-const initials = getInitials(fullName);
+// const initials = getInitials(fullName);
 
-console.log(initials); // "J. D."
+// console.log(initials); // "J. D."
 
 // Решение преподавателя
 const getInitials2 = name => name.split(' ')
