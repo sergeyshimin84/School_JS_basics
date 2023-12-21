@@ -47,53 +47,53 @@
 
 // Задание #4
 // Напишите функцию isWeekend(), которая проверяет, является ли указанная дата выходным днем.
-const days = [
-    'Воскресенье',
-    'Понедельник',
-    'Вторник',
-    'Среда',
-    'Четверг',
-    'Пятница',
-    'Суббота'
-  ];
+// const days = [
+//     'Воскресенье',
+//     'Понедельник',
+//     'Вторник',
+//     'Среда',
+//     'Четверг',
+//     'Пятница',
+//     'Суббота'
+//   ];
 
-function isWeekend(d) {
-    let n = d.getDay();
-    let check = (days[n] == 'Воскресенье' || days[n] == 'Суббота') ? 'Выходной' : 'Будни';
-    return `${check}: ${days[n]}`;
-}
+// function isWeekend(d) {
+//     let n = d.getDay();
+//     let check = (days[n] == 'Воскресенье' || days[n] == 'Суббота') ? 'Выходной' : 'Будни';
+//     return `${check}: ${days[n]}`;
+// }
 
-const date1 = new Date('2027-07-10');  // Суббота
-const date2 = new Date('2027-07-12');  // Понедельник
+// const date1 = new Date('2027-07-10');  // Суббота
+// const date2 = new Date('2027-07-12');  // Понедельник
 
-console.log(isWeekend(date1));  // true
-console.log(isWeekend(date2));  // false
+// console.log(isWeekend(date1));  // true
+// console.log(isWeekend(date2));  // false
 
 // Задание #5
 // Напишите функцию, которая проверяет, является ли год високосным. Возвращает true, если да, иначе — false. 
-function isLeapYear(year) {
-    if (!(new Date(year, 1, 29).getMonth()-1)) {
-        return true;
-    } else {
-        return false;
-    }
-}
+// function isLeapYear(year) {
+//     if (!(new Date(year, 1, 29).getMonth()-1)) {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
 
-console.log(isLeapYear(2023)); // false
-console.log(isLeapYear(2024)); // true
+// console.log(isLeapYear(2023)); // false
+// console.log(isLeapYear(2024)); // true
 
 // Задание #6
 // Напишите функцию, которая возвращает последнее число месяца.
-function getLastDayOfMonth(year, month) {
-    let date = new Date(year, month + 1, 0);
-    return date.getDate();
-}
+// function getLastDayOfMonth(year, month) {
+//     let date = new Date(year, month + 1, 0);
+//     return date.getDate();
+// }
 
-// июнь 2027
-console.log(getLastDayOfMonth(2027, 5)); // 30
+// // июнь 2027
+// console.log(getLastDayOfMonth(2027, 5)); // 30
 
-// февраль 2027
-console.log(getLastDayOfMonth(2027, 1)); // 28
+// // февраль 2027
+// console.log(getLastDayOfMonth(2027, 1)); // 28
 
-// январь 2027
-console.log(getLastDayOfMonth(2027, 0)); // 31
+// // январь 2027
+// console.log(getLastDayOfMonth(2027, 0)); // 31
