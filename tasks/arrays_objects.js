@@ -14,34 +14,34 @@
 
 Выведите циклом все названия свойств и их значения, которые есть у объекта john.
  */
-const john = {
-    name: 'John',
-    age: 26,
-    pet: 'dog'
-};
+// const john = {
+//     name: 'John',
+//     age: 26,
+//     pet: 'dog'
+// };
 
-const ann = {
-    name: 'Ann',
-    age: 33,
-    pet: 'cat' 
-};
+// const ann = {
+//     name: 'Ann',
+//     age: 33,
+//     pet: 'cat' 
+// };
 
-function getMessage (obj) {
-    return console.log(`Меня зовут ${obj.name}, мне ${obj.age}, у меня есть питомец ${obj.pet}`)
-}
+// function getMessage (obj) {
+//     return console.log(`Меня зовут ${obj.name}, мне ${obj.age}, у меня есть питомец ${obj.pet}`)
+// }
 
-function incrementAge(obj) {
-    let upAge = obj.age + 1;
-    return console.log(upAge);
-}
+// function incrementAge(obj) {
+//     let upAge = obj.age + 1;
+//     return console.log(upAge);
+// }
 
-for(let key in john) {
-    const val = john[key];
-    console.log(key,':', val);
-}
+// for(let key in john) {
+//     const val = john[key];
+//     console.log(key,':', val);
+// }
 
-getMessage(ann);
-incrementAge(john);
+// getMessage(ann);
+// incrementAge(john);
 // Решение преподавателя:
 /**
 const info = ({name, age, pet}) => console.log(`Меня зовут ${name}, мне ${age}, у меня есть питомец ${pet}`);
@@ -63,17 +63,17 @@ display(john);
 а на выходе возвращает сумму его элементов:
  */
 
-function sum(array) {
-    let sum = 0;
-    for(let i = 0; i < array.length; i++) {
-        sum += array[i];
-    }
-    return console.log(sum);
-  }
+// function sum(array) {
+//     let sum = 0;
+//     for(let i = 0; i < array.length; i++) {
+//         sum += array[i];
+//     }
+//     return console.log(sum);
+//   }
   
-const arr = [1, 50, 20, 75, 90];
+// const arr = [1, 50, 20, 75, 90];
   
-sum(arr); // 236
+// sum(arr); // 236
 // Решение преподавателя:
 /**
 function sum(array) {
@@ -99,12 +99,12 @@ sum(arr); // 236
 Снова выведите массив в консоль.
  */
 
-const names = [];
-names.push('Сергей', 'Наталья', 'Андрей', 'Ольга', 'Елена');
-console.log(names);
-names.shift();
-names.pop();
-console.log(names);
+// const names = [];
+// names.push('Сергей', 'Наталья', 'Андрей', 'Ольга', 'Елена');
+// console.log(names);
+// names.shift();
+// names.pop();
+// console.log(names);
 
 /**
  * Задание #4
@@ -114,24 +114,24 @@ console.log(names);
 Она представляет из себя список элементов (<ul>), 
 где каждый элемент списка (<li>) содержит элемент массива.
  */
-const namesGenerated = ['Bob', 'Klar', 'Petya', 'Ilya', 'Viktoriya'];
-function generateList (arr) {
-    for(let i = 0; i < arr.length; i++) {
-        listElement.insertAdjacentHTML('beforeend', getNote(arr[i]));    
-    }
-};
+// const namesGenerated = ['Bob', 'Klar', 'Petya', 'Ilya', 'Viktoriya'];
+// function generateList (arr) {
+//     for(let i = 0; i < arr.length; i++) {
+//         listElement.insertAdjacentHTML('beforeend', getNote(arr[i]));    
+//     }
+// };
 
-function getNote (note) {
-    return `
-        <ul>
-            <li>${note[0]}</li>
-            <li>${note[1]}</li>
-            <li>${note[2]}</li>
-            <li>${note[3]}</li>
-            <li>${note[4]}</li>
-        </ul>
-    `
-};
+// function getNote (note) {
+//     return `
+//         <ul>
+//             <li>${note[0]}</li>
+//             <li>${note[1]}</li>
+//             <li>${note[2]}</li>
+//             <li>${note[3]}</li>
+//             <li>${note[4]}</li>
+//         </ul>
+//     `
+// };
 // Решение преподавателя:
 // const render = arr => `<ul>${arr.map(i => `<li>${i}</li>`).join('')}</ul>`;
 
@@ -144,16 +144,16 @@ function getNote (note) {
 Выведите полученные переменные в консоль. 
  */
 
-const obj = {
-	age: 22,
-	favColor: 'red',
-	height: 188,
-	pet: 'dog',
-	money: 12300
-};
+// const obj = {
+// 	age: 22,
+// 	favColor: 'red',
+// 	height: 188,
+// 	pet: 'dog',
+// 	money: 12300
+// };
 
-let {age, favColor, height, pet, money} = obj;
-console.log(age, favColor, height, pet, money);
+// let {age, favColor, height, pet, money} = obj;
+// console.log(age, favColor, height, pet, money);
 
 /**
  * Задание #6
@@ -180,19 +180,19 @@ console.log(age, favColor, height, pet, money);
 // 	money: 12300
 // };
 
-const updateObj = {
-	age: 23,
-	favColor: 'blue',
-	money: 11450
-};
+// const updateObj = {
+// 	age: 23,
+// 	favColor: 'blue',
+// 	money: 11450
+// };
 
-const obj2 = {
-    __proto__: obj,
-};
-obj2.age = updateObj.age;
-obj2.favColor = updateObj.favColor;
-obj2.money = updateObj.money;
+// const obj2 = {
+//     __proto__: obj,
+// };
+// obj2.age = updateObj.age;
+// obj2.favColor = updateObj.favColor;
+// obj2.money = updateObj.money;
 
-console.log(obj2);
+// console.log(obj2);
 // Решение преподавателя:
 // const obj2 = { ...obj, ...updateObj };

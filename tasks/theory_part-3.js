@@ -8,6 +8,9 @@
 //     }
 //     return sum;
 // }
+// Решение преподавателя
+// const sumNumbers = (...nums) => 
+//   nums.reduce((a, b) => a + b, 0);
 
 // const result1 = sumNumbers(1, 2, 3, 4, 5);
 // console.log(result1); // 15
@@ -23,6 +26,9 @@
 //     return Math.max.apply(null ,num)
 // }
 // let findMaxValue = (num) => (num.length > 0) ? Math.max.apply(null ,num) : undefined;
+// Решение преподавателя
+// const findMaxValue = (nums) => 
+//   nums.reduce((a, b) => Math.max(a, b), nums[0]);
 
 // const numbers1 = [1, 2, 3, 4, 5];
 // const max1 = findMaxValue(numbers1);
@@ -50,6 +56,9 @@
 //     }
 //     return sum / num.length;
 // }
+// Решение преподавателя
+// const calculateAverage = (nums) =>
+//   nums.length ? nums.reduce((a, b) => a + b, 0) / nums.length : 0;
 
 // const numbers1 = [1, 2, 3, 4, 5];
 // console.log(calculateAverage(numbers1)); // 3
@@ -74,6 +83,20 @@
 //     }
 //     return true;
 // }
+// Решение преподавателя
+// Вариант 1
+// const isPalindrome = (str) => 
+//   str.toLowerCase() === str.split('').reverse().join('');
+// Вариант 2
+// function isPalindrome(str) {
+//     const len = Math.floor(str.length / 2);
+//     for (var i = 0; i < len; i++) {
+//       if (str[i] !== str[str.length - i - 1]) {
+//         return false;
+//       }
+//     }
+//     return true;
+// }
 
 // console.log(isPalindrome('level')); // true
 // console.log(isPalindrome('radar')); // true
@@ -86,6 +109,13 @@
 //     const uniqNum = new Set(num);
 //     return [...uniqNum];
 // }
+// Решение преподавателя
+// Вариант 1
+// const removeDuplicates = arr => 
+// 	new Array(...new Set(arr));
+// Вариант 2
+// const removeDuplicates = arr => 
+//   arr.filter((value, index) => arr.indexOf(value) === index);
 
 // const numbers1 = [1, 2, 3, 3, 4, 5, 5];
 // console.log(removeDuplicates(numbers1));  // [1, 2, 3, 4, 5]
@@ -104,14 +134,19 @@
 // get() — возвращает текущее значение.
 // Пример использования функции:
 
-function createCounter(value) {
-    
-} // Не разобрался!
+// Решение преподавателя
+// function createCounter(value) {
+//     const inc = () => value++;
+//     const dec = () => value--;
+//     const get = () => value;
 
-const { inc, dec, get } = createCounter(5);
-console.log(get()); // 5
-inc();
-inc();
-inc();
-dec();
-console.log(get()); // 7
+//     return { inc, dec, get };
+// }
+
+// const { inc, dec, get } = createCounter(5);
+// console.log(get()); // 5
+// inc();
+// inc();
+// inc();
+// dec();
+// console.log(get()); // 7
