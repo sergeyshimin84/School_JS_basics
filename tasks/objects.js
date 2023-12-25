@@ -68,11 +68,31 @@ person.showFriends(); // Иван, Сергей, Игорь
 // 3. Сделайте так, чтобы код ниже работал:
 
 class Animal {
-    name = this.name;
-    favoriteFood = this.favoriteFood;
-    makeSound = (sound) => console.log(sound);
-    sayName = (name) => console.log(name);
-    sayInfo() {};
+    constructor(name, favoriteFood) {
+        this.name = name;
+        this.favoriteFood = favoriteFood;
+    }
+    makeSound () {
+        return console.log();
+    }
+    sayName () {
+        return console.log(`My name is ${this.name}`);
+    }
+    sayInfo() {
+        return console.log(`${this.name}'s favorite food is ${this.favoriteFood}`);
+    }
+}
+
+class Cat extends Animal {
+    constructor(name, favoriteFood) {
+        super(name, favoriteFood);
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, favoriteFood) {
+        super(name, favoriteFood);
+    }
 }
 
 const dog = new Dog('Rex', 'Meat');
@@ -86,3 +106,35 @@ cat.sayName(); // My name is Barsik
 
 dog.sayInfo(); // Rex's favorite food is Meat
 cat.sayInfo(); // Barsik's favorite food is Fish
+
+// Задание #5
+// Создайте объект foo со свойством a равным 5. Также добавьте ему два метода:
+// bar() — с помощью ключевого слова function;
+// baz() — с помощью стрелочной функции.
+// Внутри методов выведите в консоль this.a и затем выполните следующий код:
+
+foo.bar();
+foo.baz();
+
+// Задание #6
+// Дан следующий фрагмент кода:
+
+const boxFactory = {
+	type: 'box',
+	count: 0,
+	produce: () => {
+		this.count++;
+		return 'Box №' + this.count;
+	}
+}
+
+const produceBox = (produceFn) => {
+	const boxName = produceFn();
+	console.log(boxName);
+}
+
+for(let i = 0; i < 25; i++) {
+	produceBox(boxFactory.produce);
+}
+// Отредактируйте код так, чтобы при его работе выводились корректные номера коробок. 
+// Функцию produceBox() править нельзя. 
