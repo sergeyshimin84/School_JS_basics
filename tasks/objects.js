@@ -113,6 +113,16 @@ cat.sayInfo(); // Barsik's favorite food is Fish
 // baz() — с помощью стрелочной функции.
 // Внутри методов выведите в консоль this.a и затем выполните следующий код:
 
+const foo = {
+    a: 5,
+    bar: function bar() {
+        console.log(this.a);
+    },
+    baz: () => {
+        console.log(foo.a);
+    }
+}
+
 foo.bar();
 foo.baz();
 
@@ -123,8 +133,8 @@ const boxFactory = {
 	type: 'box',
 	count: 0,
 	produce: () => {
-		this.count++;
-		return 'Box №' + this.count;
+		count = boxFactory.count++;
+		return `Box № ${count}`;
 	}
 }
 
@@ -137,4 +147,4 @@ for(let i = 0; i < 25; i++) {
 	produceBox(boxFactory.produce);
 }
 // Отредактируйте код так, чтобы при его работе выводились корректные номера коробок. 
-// Функцию produceBox() править нельзя. 
+// Функцию produceBox() править нельзя.
