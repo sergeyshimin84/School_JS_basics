@@ -7,8 +7,13 @@ class Circle {
     constructor(radius) {
         this.radius = radius;
     }
+    // getArea() {
+    //     return Math.PI * Math.pow(this.radius, 2);
+    // }
+    // Решение преподаветеля:
     getArea() {
-        return Math.PI * Math.pow(this.radius, 2);
+        const area = Math.PI * Math.pow(this.radius, 2);
+        return area.toFixed(2); // Метод toFixed() форматирует число, используя запись с фиксированной запятой.
     }
 }
 
@@ -30,6 +35,12 @@ class Product {
     priceWithDiscount(discount) {
         return this.price - (this.price * (discount / 100));
     }
+    // Решение преподавателя (действие разбито на несколько этапов):
+    // priceWithDiscount(discountPercent) {
+    //     const discount = this.price * (discountPercent / 100);
+    //     const discountedPrice = this.price - discount;
+    //     return discountedPrice;
+    // }
 }
 
 const product = new Product("Phone", 1000);
@@ -47,8 +58,12 @@ class Person {
     addFriend(name) {
         this.friends.push(name);
     }
+    // showFriends() {
+    //     return console.log(this.friends);
+    // }
+    // Решение преподавателя:
     showFriends() {
-        return console.log(this.friends);
+        return console.log(this.friends.join(', '));
     }
 }
 
@@ -72,9 +87,14 @@ class Animal {
         this.name = name;
         this.favoriteFood = favoriteFood;
     }
-    makeSound () {
-        return console.log();
+    // makeSound () {
+    //     return console.log();
+    // }
+    // Решение преподавателя:
+    makeSound() {
+        console.log("Animal sound");
     }
+    // Мое решение:
     sayName () {
         return console.log(`My name is ${this.name}`);
     }
@@ -83,15 +103,27 @@ class Animal {
     }
 }
 
+// class Cat extends Animal {
+//     constructor(name, favoriteFood) {
+//         super(name, favoriteFood);
+//     }
+// }
+
+// class Dog extends Animal {
+//     constructor(name, favoriteFood) {
+//         super(name, favoriteFood);
+//     }
+// }
+// Решение преподавателя:
 class Cat extends Animal {
-    constructor(name, favoriteFood) {
-        super(name, favoriteFood);
+    makeSound() {
+      console.log("Meow");
     }
 }
-
-class Dog extends Animal {
-    constructor(name, favoriteFood) {
-        super(name, favoriteFood);
+  
+  class Dog extends Animal {
+    makeSound() {
+      console.log("Gav!");
     }
 }
 
@@ -115,16 +147,16 @@ cat.sayInfo(); // Barsik's favorite food is Fish
 
 const foo = {
     a: 5,
-    bar: function bar() {
+    bar: function () {
         console.log(this.a);
     },
     baz: () => {
-        console.log(foo.a);
-    }
+        console.log(this.a);
+    } // Стралочная функция не содержит this
 }
 
-foo.bar();
-foo.baz();
+foo.bar(); // Вывод: 5
+foo.baz(); // Вывод: undefined
 
 // Задание #6
 // Дан следующий фрагмент кода:
@@ -132,9 +164,14 @@ foo.baz();
 const boxFactory = {
 	type: 'box',
 	count: 0,
-	produce: () => {
-		count = boxFactory.count++;
-		return `Box № ${count}`;
+	// produce: () => {
+	// 	count = boxFactory.count++;
+	// 	return `Box № ${count}`;
+	// }
+    // Решение преподавателя:
+    produce() {
+		this.count++;
+		return 'Box №' + this.count;
 	}
 }
 
@@ -144,7 +181,9 @@ const produceBox = (produceFn) => {
 }
 
 for(let i = 0; i < 25; i++) {
-	produceBox(boxFactory.produce);
+    // produceBox(boxFactory.produce);
+    // Решение преподавателя:
+	produceBox(boxFactory.produce.bind(boxFactory));
 }
 // Отредактируйте код так, чтобы при его работе выводились корректные номера коробок. 
 // Функцию produceBox() править нельзя.
