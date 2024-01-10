@@ -3,22 +3,22 @@
 // высчитывающий площадь круга и округляющий её до двух знаков после запятой. 
 // Сделайте так, чтобы код ниже работал:
 
-class Circle {
-    constructor(radius) {
-        this.radius = radius;
-    }
-    // getArea() {
-    //     return Math.PI * Math.pow(this.radius, 2);
-    // }
-    // Решение преподаветеля:
-    getArea() {
-        const area = Math.PI * Math.pow(this.radius, 2);
-        return area.toFixed(2); // Метод toFixed() форматирует число, используя запись с фиксированной запятой.
-    }
-}
+// class Circle {
+//     constructor(radius) {
+//         this.radius = radius;
+//     }
+//     // getArea() {
+//     //     return Math.PI * Math.pow(this.radius, 2);
+//     // }
+//     // Решение преподаветеля:
+//     getArea() {
+//         const area = Math.PI * Math.pow(this.radius, 2);
+//         return area.toFixed(2); // Метод toFixed() форматирует число, используя запись с фиксированной запятой.
+//     }
+// }
 
-const circle = new Circle(5);
-console.log(circle.getArea()); // "78.54"
+// const circle = new Circle(5);
+// console.log(circle.getArea()); // "78.54"
 
 // Задание #2
 // Реализуйте класс Product, который имеет поля name и price. 
@@ -27,25 +27,25 @@ console.log(circle.getArea()); // "78.54"
 
 // Сделайте так, чтобы код ниже работал:
 
-class Product {
-    constructor(name, price) {
-        this.name = name;
-        this.price = price;
-    }
-    priceWithDiscount(discount) {
-        return this.price - (this.price * (discount / 100));
-    }
-    // Решение преподавателя (действие разбито на несколько этапов):
-    // priceWithDiscount(discountPercent) {
-    //     const discount = this.price * (discountPercent / 100);
-    //     const discountedPrice = this.price - discount;
-    //     return discountedPrice;
-    // }
-}
+// class Product {
+//     constructor(name, price) {
+//         this.name = name;
+//         this.price = price;
+//     }
+//     priceWithDiscount(discount) {
+//         return this.price - (this.price * (discount / 100));
+//     }
+//     // Решение преподавателя (действие разбито на несколько этапов):
+//     // priceWithDiscount(discountPercent) {
+//     //     const discount = this.price * (discountPercent / 100);
+//     //     const discountedPrice = this.price - discount;
+//     //     return discountedPrice;
+//     // }
+// }
 
-const product = new Product("Phone", 1000);
-console.log(product.priceWithDiscount(10)); // 900
-console.log(product.priceWithDiscount(20)); // 800
+// const product = new Product("Phone", 1000);
+// console.log(product.priceWithDiscount(10)); // 900
+// console.log(product.priceWithDiscount(20)); // 800
 
 // Задание #3
 // Реализуйте класс Person, который имеет поле friends (изначально пустой массив). Также он имеет методы:
@@ -53,25 +53,25 @@ console.log(product.priceWithDiscount(20)); // 800
 // showFriends() — выводит в консоль строку со всеми друзьями через запятую.
 // Сделайте так, чтобы код ниже работал:
 
-class Person {
-    friends = [];
-    addFriend(name) {
-        this.friends.push(name);
-    }
-    // showFriends() {
-    //     return console.log(this.friends);
-    // }
-    // Решение преподавателя:
-    showFriends() {
-        return console.log(this.friends.join(', '));
-    }
-}
+// class Person {
+//     friends = [];
+//     addFriend(name) {
+//         this.friends.push(name);
+//     }
+//     // showFriends() {
+//     //     return console.log(this.friends);
+//     // }
+//     // Решение преподавателя:
+//     showFriends() {
+//         return console.log(this.friends.join(', '));
+//     }
+// }
 
-const person = new Person();
-person.addFriend("Иван");
-person.addFriend("Сергей");
-person.addFriend("Игорь");
-person.showFriends(); // Иван, Сергей, Игорь
+// const person = new Person();
+// person.addFriend("Иван");
+// person.addFriend("Сергей");
+// person.addFriend("Игорь");
+// person.showFriends(); // Иван, Сергей, Игорь
 
 // Задание #4
 // 1. Создайте класс Animal с полями name, favoriteFood, а также методами:
@@ -82,26 +82,26 @@ person.showFriends(); // Иван, Сергей, Игорь
 // Переопределите для них метод makeSound(), чтобы он всегда возвращал соответствующий звук животного. 
 // 3. Сделайте так, чтобы код ниже работал:
 
-class Animal {
-    constructor(name, favoriteFood) {
-        this.name = name;
-        this.favoriteFood = favoriteFood;
-    }
-    // makeSound () {
-    //     return console.log();
-    // }
-    // Решение преподавателя:
-    makeSound() {
-        console.log("Animal sound");
-    }
-    // Мое решение:
-    sayName () {
-        return console.log(`My name is ${this.name}`);
-    }
-    sayInfo() {
-        return console.log(`${this.name}'s favorite food is ${this.favoriteFood}`);
-    }
-}
+// class Animal {
+//     constructor(name, favoriteFood) {
+//         this.name = name;
+//         this.favoriteFood = favoriteFood;
+//     }
+//     // makeSound () {
+//     //     return console.log();
+//     // }
+//     // Решение преподавателя:
+//     makeSound() {
+//         console.log("Animal sound");
+//     }
+//     // Мое решение:
+//     sayName () {
+//         return console.log(`My name is ${this.name}`);
+//     }
+//     sayInfo() {
+//         return console.log(`${this.name}'s favorite food is ${this.favoriteFood}`);
+//     }
+// }
 
 // class Cat extends Animal {
 //     constructor(name, favoriteFood) {
@@ -115,29 +115,29 @@ class Animal {
 //     }
 // }
 // Решение преподавателя:
-class Cat extends Animal {
-    makeSound() {
-      console.log("Meow");
-    }
-}
+// class Cat extends Animal {
+//     makeSound() {
+//       console.log("Meow");
+//     }
+// }
   
-  class Dog extends Animal {
-    makeSound() {
-      console.log("Gav!");
-    }
-}
+//   class Dog extends Animal {
+//     makeSound() {
+//       console.log("Gav!");
+//     }
+// }
 
-const dog = new Dog('Rex', 'Meat');
-const cat = new Cat('Barsik', 'Fish');
+// const dog = new Dog('Rex', 'Meat');
+// const cat = new Cat('Barsik', 'Fish');
 
-cat.makeSound(); // Meow
-dog.makeSound(); // Gav!
+// cat.makeSound(); // Meow
+// dog.makeSound(); // Gav!
 
-dog.sayName(); // My name is Rex
-cat.sayName(); // My name is Barsik
+// dog.sayName(); // My name is Rex
+// cat.sayName(); // My name is Barsik
 
-dog.sayInfo(); // Rex's favorite food is Meat
-cat.sayInfo(); // Barsik's favorite food is Fish
+// dog.sayInfo(); // Rex's favorite food is Meat
+// cat.sayInfo(); // Barsik's favorite food is Fish
 
 // Задание #5
 // Создайте объект foo со свойством a равным 5. Также добавьте ему два метода:
@@ -145,45 +145,45 @@ cat.sayInfo(); // Barsik's favorite food is Fish
 // baz() — с помощью стрелочной функции.
 // Внутри методов выведите в консоль this.a и затем выполните следующий код:
 
-const foo = {
-    a: 5,
-    bar: function () {
-        console.log(this.a);
-    },
-    baz: () => {
-        console.log(this.a);
-    } // Стралочная функция не содержит this
-}
+// const foo = {
+//     a: 5,
+//     bar: function () {
+//         console.log(this.a);
+//     },
+//     baz: () => {
+//         console.log(this.a);
+//     } // Стралочная функция не содержит this
+// }
 
-foo.bar(); // Вывод: 5
-foo.baz(); // Вывод: undefined
+// foo.bar(); // Вывод: 5
+// foo.baz(); // Вывод: undefined
 
 // Задание #6
 // Дан следующий фрагмент кода:
 
-const boxFactory = {
-	type: 'box',
-	count: 0,
-	// produce: () => {
-	// 	count = boxFactory.count++;
-	// 	return `Box № ${count}`;
-	// }
-    // Решение преподавателя:
-    produce() {
-		this.count++;
-		return 'Box №' + this.count;
-	}
-}
+// const boxFactory = {
+// 	type: 'box',
+// 	count: 0,
+// 	// produce: () => {
+// 	// 	count = boxFactory.count++;
+// 	// 	return `Box № ${count}`;
+// 	// }
+//     // Решение преподавателя:
+//     produce() {
+// 		this.count++;
+// 		return 'Box №' + this.count;
+// 	}
+// }
 
-const produceBox = (produceFn) => {
-	const boxName = produceFn();
-	console.log(boxName);
-}
+// const produceBox = (produceFn) => {
+// 	const boxName = produceFn();
+// 	console.log(boxName);
+// }
 
-for(let i = 0; i < 25; i++) {
-    // produceBox(boxFactory.produce);
-    // Решение преподавателя:
-	produceBox(boxFactory.produce.bind(boxFactory));
-}
+// for(let i = 0; i < 25; i++) {
+//     // produceBox(boxFactory.produce);
+//     // Решение преподавателя:
+// 	produceBox(boxFactory.produce.bind(boxFactory));
+// }
 // Отредактируйте код так, чтобы при его работе выводились корректные номера коробок. 
 // Функцию produceBox() править нельзя.
